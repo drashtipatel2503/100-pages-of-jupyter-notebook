@@ -1,0 +1,61 @@
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Score test</title>
+
+  
+  <meta charset="utf-8">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.0.1/tailwind.min.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link type="stylesheets" href="{{ url_for('static', filename='styles.css')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.4.1.min.js')}}"></script>
+  <link type="stylesheet" href="{{ url_for('static', filename='styles.css')}}"></link>
+  <link type="stylesheets" href="static/styles.css"></link>
+</head>
+<style>
+    h3{
+        color:purple;
+        width:100%;
+        text-align: center;
+        margin-top:15%;
+        font-size: 50px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row"><h3><i>Predicting your scores!!!</i></h3></div>
+
+        <form action="{{url_for('submit')}}" method="POST">
+        <div class="row" style="width:100%; margin-top:5%;">
+            <input type="text" name="time"style=" margin-left:25%;width:50%;padding:1%;" placeholder="Enter your study time">
+        </div>
+    </form>
+        <div class="row">
+            <button  style="width:40%;padding:1%;margin:2%; margin-left:25%;background-color: rgb(234, 147, 241); border-radius :30px;">Submit</button>
+        </div>
+        
+        <div class="row" style="text-align: center;">
+
+            <h5 style="text-align: center;width:100%">Your scores (approx)</h5><br>
+            <h5 style="text-align: center;width:100%">{{ data }}</h5>
+        </div>
+    </div>
+</body>
+</html>
